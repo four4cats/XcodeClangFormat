@@ -14,7 +14,7 @@ command -v "${LLVM_CONFIG}" >/dev/null 2>&1 || {
         mkdir -p "deps"
         FILE="deps/clang-${LLVM_VERSION}.tar.xz"
         if [ ! -f "${FILE}" ]; then
-            URL="http://llvm.org/releases/${LLVM_VERSION}/clang+llvm-${LLVM_VERSION}-x86_64-apple-darwin.tar.xz"
+            URL="http://llvm.org/releases/${LLVM_VERSION}/clang+llvm-${LLVM_VERSION}-x86_64-darwin-apple.tar.xz"
             echo "Downloading ${URL}..."
             curl --retry 3 -# -S -L "${URL}" -o "${FILE}.tmp" && mv "${FILE}.tmp" "${FILE}"
         fi
