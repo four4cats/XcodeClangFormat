@@ -207,6 +207,7 @@
 				TargetAttributes = {
 					559B23DD1D7EBDA300937AB3 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = WZ3C6S544H;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.Mac = {
@@ -219,6 +220,7 @@
 					};
 					559B240E1D7EBDC400937AB3 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = WZ3C6S544H;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.Mac = {
@@ -233,6 +235,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -402,10 +405,10 @@
 				CODE_SIGN_ENTITLEMENTS = XcodeClangFormat/XcodeClangFormat.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = WZ3C6S544H;
 				INFOPLIST_FILE = XcodeClangFormat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mapbox.XcodeClangFormat;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.chengyu.XcodeClangFormat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -418,10 +421,10 @@
 				CODE_SIGN_ENTITLEMENTS = XcodeClangFormat/XcodeClangFormat.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = WZ3C6S544H;
 				INFOPLIST_FILE = XcodeClangFormat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mapbox.XcodeClangFormat;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.chengyu.XcodeClangFormat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -434,12 +437,13 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = WZ3C6S544H;
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
 				GCC_ENABLE_CPP_RTTI = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				HEADER_SEARCH_PATHS = deps/;
 				INFOPLIST_FILE = "clang-format/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -456,7 +460,7 @@
 					"$(LLVM_LIBDIR)/libLLVMCore.a",
 					"$(LLVM_LIBDIR)/libLLVMSupport.a",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mapbox.XcodeClangFormat.clang-format";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.chengyu.XcodeClangFormat.clang-format";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				STRIP_STYLE = all;
@@ -471,12 +475,13 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = WZ3C6S544H;
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
 				GCC_ENABLE_CPP_RTTI = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				HEADER_SEARCH_PATHS = deps/;
 				INFOPLIST_FILE = "clang-format/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -493,7 +498,7 @@
 					"$(LLVM_LIBDIR)/libLLVMCore.a",
 					"$(LLVM_LIBDIR)/libLLVMSupport.a",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mapbox.XcodeClangFormat.clang-format";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.chengyu.XcodeClangFormat.clang-format";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				STRIP_STYLE = all;
