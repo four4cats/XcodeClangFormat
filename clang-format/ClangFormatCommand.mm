@@ -98,7 +98,7 @@ NSUserDefaults* defaults = nil;
     }
 
     clang::format::FormatStyle format = clang::format::getLLVMStyle();
-    format.Language = clang::format::FormatStyle::LK_Cpp;
+    format.Language = clang::format::FormatStyle::LK_ObjC;
     clang::format::getPredefinedStyle("LLVM", format.Language, &format);
     if ([style isEqualToString:@"custom"]) {
         NSData* config = [self getCustomStyle];
@@ -130,7 +130,7 @@ NSUserDefaults* defaults = nil;
     } else {
         auto success = clang::format::getPredefinedStyle(
             llvm::StringRef([style cStringUsingEncoding:NSUTF8StringEncoding]),
-            clang::format::FormatStyle::LanguageKind::LK_Cpp, &format);
+            clang::format::FormatStyle::LanguageKind::LK_ObjC, &format);
         if (!success) {
             completionHandler([NSError
                 errorWithDomain:errorDomain
@@ -187,9 +187,8 @@ NSUserDefaults* defaults = nil;
 
     // Update the selections with the shifted code positions.
     for (auto& range : ranges) {
-        const size_t start = clang::tooling::shiftedCodePosition(replaces, range.getOffset());
-        const size_t end =
-            clang::tooling::shiftedCodePosition(replaces, range.getOffset() + range.getLength());
+        const size_t start = replaces.getShiftedCodePosition(range.getOffset());
+        const size_t end = replaces.getShiftedCodePosition(range.getOffset() + range.getLength());
 
         // In offsets, find the value that is smaller than start.
         auto start_it = std::lower_bound(offsets.begin(), offsets.end(), start);
